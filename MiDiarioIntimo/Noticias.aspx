@@ -81,7 +81,8 @@
         <tr>
             <td class="auto-style8">Descripcion:</td>
             <td class="auto-style9">
-                <textarea id="TxADescripcion" cols="25" rows="5"></textarea>
+                <asp:TextBox id="TxTDescripcion" TextMode="multiline" Columns="50" Rows="5" runat="server" />
+
             </td>
             <td class="auto-style10">
             </td>
@@ -90,11 +91,15 @@
             <td class="auto-style3">&nbsp;</td>
             <td class="auto-style6">
                 &nbsp;
-                <asp:Button ID="BtnSubirNoticia" runat="server" Text="Registrar" />
+                <asp:Button ID="BtnCrearNoticia" runat="server" Text="Registrar" OnClick="btnCrearNoticia_Click" />
+                <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
                 <asp:LinkButton ID="LnkVolver" runat="server" OnClick="LnkVolver_Click">Volver</asp:LinkButton>
             </td>
             <td class="auto-style5">
                 &nbsp;</td>
         </tr>
     </table>
+    <br />
+    <asp:GridView ID="GrdNoticias" align="center"  runat="server"></asp:GridView>
+
 </asp:Content>
