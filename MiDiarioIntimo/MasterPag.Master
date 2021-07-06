@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPag.master.cs" Inherits="MiDiarioIntimo.MasterPag" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MiDiarioIntimo</title>
+    <link rel="icon" href="Assets/favicon.ico" type="image/x-icon">
+    <link href="CSS/Style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!-- Barra superior de navegacion -->
+            <asp:Menu class="MenuTop" runat="server" DisappearAfter="1000" Orientation="Horizontal" StaticDisplayLevels="1">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Index.aspx" Text="Inicio"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Noticias.aspx" Text="Noticias"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Cuestionarios.aspx" Text="Cuestionarios"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Donaciones.aspx" Text="Donar"></asp:MenuItem>
+                    <asp:MenuItem Text="Sitios de ayuda">
+                        <asp:MenuItem Text="Chile">
+                            <asp:MenuItem NavigateUrl="https://chilemujeres.cl/" Text="Chile Mujeres"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="https://www.comunidadmujer.cl/" Text="Comunidad Mujer"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Internacional">
+                            <asp:MenuItem NavigateUrl="https://twfhk.org/" Text="Women's Foundation"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </asp:MenuItem>
+                </Items>
+            </asp:Menu>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
