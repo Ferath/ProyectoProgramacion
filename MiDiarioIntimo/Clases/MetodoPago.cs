@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MiDiarioIntimo.Clases
 {
-    public class MetodoPago : Donacion
+    public class MetodoPago
     {
         private int idmetodopago;
         private string metodopago;

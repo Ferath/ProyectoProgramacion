@@ -9,9 +9,9 @@ namespace MiDiarioIntimo.Clases
     {
         private int id_donacion;
         private float cantidad_donacion;
-        private MetodoPago metodopago;
+        private string metodopago;
 
-        public Donacion(float cantidad_donacion, MetodoPago metodopago, int id_donacion)
+        public Donacion(float cantidad_donacion, string metodopago, int id_donacion)
         {
             this.cantidad_donacion = cantidad_donacion;
             this.metodopago = metodopago;
@@ -25,6 +25,6 @@ namespace MiDiarioIntimo.Clases
 
         public int Id_donacion { get => id_donacion; set => id_donacion = value; }
         public float Cantidad_donacion { get => cantidad_donacion; set => cantidad_donacion = value; }
-        public MetodoPago Metodopago1 { get => metodopago; set => metodopago = value; }
+        public string Metodopago1 { get => metodopago; set => metodopago = value; }
     }
 }

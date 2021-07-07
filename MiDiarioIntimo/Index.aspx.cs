@@ -22,10 +22,9 @@ namespace MiDiarioIntimo
             GrdNoticias.DataSource = from m in NoticiaController.GetAll()
                                      select new
                                      {
-                                         Id = m.Id_noticia,
                                          Titulo = m.Titulo,
-                                         description = m.Descripcion,
-                                         Date = m.Fecha
+                                         Descripcion = m.Descripcion,
+                                         Fecha = m.Fecha
 
                                      };
             GrdNoticias.DataBind();

@@ -57,7 +57,6 @@
                 <asp:TextBox ID="TxtIdNoticia" runat="server"></asp:TextBox>
             </td>
             <td class="auto-style5">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="TxtIdNoticia" runat="server" ErrorMessage="El ID es requerido" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -66,7 +65,6 @@
                 <asp:TextBox ID="TxtTitulo" runat="server"></asp:TextBox>
             </td>
             <td class="auto-style10">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ControlToValidate="TxtTitulo" ErrorMessage="El Titulo es Requerido" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
@@ -75,14 +73,12 @@
                 <asp:TextBox ID="TxtFechaNoticia" TextMode="date" runat="server"></asp:TextBox>
             </td>
             <td class="auto-style5">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TxtFechaNoticia" Display="Dynamic" ErrorMessage="La Fecha es Requerida" ForeColor="Red"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
             <td class="auto-style8">Descripcion:</td>
             <td class="auto-style9">
                 <asp:TextBox id="TxTDescripcion" TextMode="multiline" Columns="50" Rows="5" runat="server" />
-
             </td>
             <td class="auto-style10">
             </td>
@@ -101,5 +97,10 @@
     </table>
     <br />
     <asp:GridView ID="GrdNoticias" align="center"  runat="server"></asp:GridView>
+    <br />
+    <asp:TextBox ID="TxtBuscarNoticia" runat="server"></asp:TextBox>
+    <asp:Button ID="BtnEliminar" runat="server" onclick="btnEliminarNoticia_Click" Text="Eliminar Noticia" />
+    <asp:Button ID="BtnBuscar" runat="server" onclick="btnBuscarNoticia_Click" Text="Comprobar si Existe" />
+    <asp:Label ID="LbBorrar" runat="server" Text=""></asp:Label>
 
 </asp:Content>

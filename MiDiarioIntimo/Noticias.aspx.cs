@@ -29,17 +29,36 @@ namespace MiDiarioIntimo
 
         public void CargarNoticias()
         {
-
             GrdNoticias.DataSource = from m in NoticiaController.GetAll()
                                        select new
                                        {
-                                           Id = m.Id_noticia,
                                            Titulo = m.Titulo,
-                                           description = m.Descripcion,
-                                           Date = m.Fecha
-
+                                           Descripcion = m.Descripcion,
+                                           Fecha = m.Fecha,
                                        };
             GrdNoticias.DataBind();
         }
+
+        protected void btnEliminarNoticia_Click(object sender, EventArgs e)
+        {
+            LbBorrar.Text = NoticiaController.RemoverNoticia(TxtBuscarNoticia.Text);
+            CargarNoticias();
+            this.Response.Redirect(this.Request.Url.AbsoluteUri);
+        }
+
+        protected void btnBuscarNoticia_Click(object sender, EventArgs e)
+        {
+            Noticia noticia = NoticiaController.BuscarNoticia(TxtBuscarNoticia.Text);
+
+            if (noticia != null)
+            {
+                LbBorrar.Text = " Si existe su noticia";
+            }
+            else
+            {
+                LbBorrar.Text = " No encontrado";
+            }
+        }
+
     }
 }
